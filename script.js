@@ -128,8 +128,8 @@ var checkDead = setInterval(function(){
 		document.getElementById("scorecard").innerHTML = score;	
 	}
 	if(characterTop < -50 || characterTop > 500 || characterLeft < -50 || characterLeft > 500){
+		document.location.reload(true);
 		alert("There is No Escape D:<");
-    	document.location.reload(true);
 
 	}
 

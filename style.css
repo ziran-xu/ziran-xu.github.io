@@ -1,0 +1,50 @@
+*{
+
+}
+#game{
+	width: 500px;
+	height: 500px;
+	border: 1px solid black;
+	margin: auto;
+	overflow: hidden;
+	background-color: gray;
+	position:absolute;
+}
+#block{
+	width: 50px;
+	height: 50px;
+	background-color: red;
+	position: absolute;
+	animation: fall 1s infinite linear;
+	z-index: 3;
+}
+
+@keyframes fall{
+	0%{top: -50px}
+	100%{top:500px}
+}
+
+#block2{
+	width: 50px;
+	height: 50px;
+	background-color: lime;
+	position: absolute;
+	animation: rise 2s infinite linear;
+	z-index: 1;
+}
+
+@keyframes rise{
+	0%{top:500px}
+	100%{top:-50px}
+}
+
+#character{
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 60%;
+	position: absolute;
+	top: 225px;
+	left: 225px;
+	z-index: 2;
+}

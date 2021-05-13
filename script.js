@@ -21,7 +21,8 @@ block.addEventListener('animationiteration',()=>{
 	var rando = (Math.random()*450);
 	block2.style.left = rando + "px";
 	count = -1;
-	}	
+	}
+	count++;	
 });
 
 

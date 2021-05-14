@@ -120,16 +120,18 @@ var checkDead = setInterval(function(){
 	parseInt(window.getComputedStyle(block2).getPropertyValue("left"));
 
 	if (lava == true){
-		score-=9
+		score-=9;
 		document.getElementById("scorecard").innerHTML = score;	
 	}
 	document.getElementById("scorecard").innerHTML = score;
 	if(Math.abs(characterTop - blockTop) < 50 && Math.abs(characterLeft - blockLeft) < 50){
-		lava = true
-		document.getElementById("backimg").src = "images/lava.gif";
+		if (lava == false){
+			document.getElementById("backimg").src = "images/lava.gif";
+			lava = true;
+		}
 	}
 	if(Math.abs(characterTop - block2Top) < 50 && Math.abs(characterLeft - block2Left) < 50){
-		score+=1
+		score+=1;
 		lava = false;
 		document.getElementById("scorecard").innerHTML = score;	
 		document.getElementById("backimg").src = "images/painting.jpg";

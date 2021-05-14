@@ -11,6 +11,7 @@ var stop1 = false;
 var stop2 = false;
 var stop3 = false;
 var stop4 = false;
+var lava = false;
 
 
 block.addEventListener('animationiteration',()=>{
@@ -118,20 +119,24 @@ var checkDead = setInterval(function(){
 	var block2Left =
 	parseInt(window.getComputedStyle(block2).getPropertyValue("left"));
 
-
-
-	if(Math.abs(characterTop - blockTop) < 50 && Math.abs(characterLeft - blockLeft) < 50){
-		score-=5
+	if (lava == true){
+		score-=9
 		document.getElementById("scorecard").innerHTML = score;	
+	}
+	document.getElementById("scorecard").innerHTML = score;
+	if(Math.abs(characterTop - blockTop) < 50 && Math.abs(characterLeft - blockLeft) < 50){
+		lava = true
+		document.getElementById("backimg").src = "images/lava.gif";
 	}
 	if(Math.abs(characterTop - block2Top) < 50 && Math.abs(characterLeft - block2Left) < 50){
 		score+=1
+		lava = false;
 		document.getElementById("scorecard").innerHTML = score;	
+		document.getElementById("backimg").src = "images/painting.jpg";
 	}
 	if(characterTop < -50 || characterTop > 500 || characterLeft < -50 || characterLeft > 500){
 		document.location.reload(true);
 		alert("There is No Escape D:<");
-
 	}
 
 },10);

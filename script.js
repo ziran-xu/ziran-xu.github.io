@@ -137,8 +137,10 @@ var checkDead = setInterval(function(){
 		document.getElementById("backimg").src = "images/painting.jpg";
 	}
 	if(characterTop < -50 || characterTop > 500 || characterLeft < -50 || characterLeft > 500){
-		document.location.reload(true);
+		character.style.left = 225 + "px"
+		character.style.top = 225 + "px"
 		alert("There is No Escape D:<");
+		document.location.reload(true);
 	}
 
 },10);

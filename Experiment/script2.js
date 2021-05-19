@@ -108,14 +108,14 @@ var buttRight = document.getElementById("butt2")
 var buttUp = document.getElementById("butt3")
 var buttDown = document.getElementById("butt4")
 
-buttLeft.addEventListener("mousedown", event =>{
+buttLeft.addEventListener("touchstart", event =>{
 	if(check1<2){check1 ++;}
 	if(check1 == 1){
 		interval1 = setInterval(moveLeft, 1);
 		if(check1<2){check1 ++;}
 		}
 });
-buttRight.addEventListener("mousedown", event =>{
+buttRight.addEventListener("touchstart", event =>{
 	if(check2<2){check2 ++;}
 	if(check2 == 1){
 		interval2 = setInterval(moveRight, 1);
@@ -123,7 +123,7 @@ buttRight.addEventListener("mousedown", event =>{
 		}
 
 });
-buttUp.addEventListener("mousedown", event =>{
+buttUp.addEventListener("touchstart", event =>{
 	if(check3<2){check3 ++;}
 	if(check3 == 1){
 		interval3 = setInterval(moveDown, 1);
@@ -131,7 +131,7 @@ buttUp.addEventListener("mousedown", event =>{
 		}
 	
 });
-buttDown.addEventListener("mousedown", event =>{
+buttDown.addEventListener("touchstart", event =>{
 	if(check4<2){check4 ++;}
 		if(check4 == 1){
 		interval4 = setInterval(moveUp, 1);
@@ -139,19 +139,19 @@ buttDown.addEventListener("mousedown", event =>{
 		}
 });
 
-buttLeft.addEventListener("mouseup", event =>{
+buttLeft.addEventListener("touchend", event =>{
 		clearInterval(interval1);
 		check1 = 0;
 });
-buttRight.addEventListener("mouseup", event =>{
+buttRight.addEventListener("touchend", event =>{
 		clearInterval(interval2);
 		check2 = 0;
 });
-buttUp.addEventListener("mouseup", event =>{
+buttUp.addEventListener("touchend", event =>{
 		clearInterval(interval3);
 		check3 = 0;
 });
-buttDown.addEventListener("mouseup", event =>{
+buttDown.addEventListener("touchend", event =>{
 		clearInterval(interval4);
 		check4 = 0;
 });

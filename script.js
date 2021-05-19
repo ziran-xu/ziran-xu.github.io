@@ -103,58 +103,6 @@ document.addEventListener("keyup", event =>{
 	}
 });
 
-var buttLeft = document.getElementById("butt1")
-var buttRight = document.getElementById("butt2")
-var buttUp = document.getElementById("butt3")
-var buttDown = document.getElementById("butt4")
-
-buttLeft.addEventListener("mousedown", event =>{
-	if(check1<2){check1 ++;}
-	if(check1 == 1){
-		interval1 = setInterval(moveLeft, 1);
-		if(check1<2){check1 ++;}
-		}
-});
-buttRight.addEventListener("mousedown", event =>{
-	if(check2<2){check2 ++;}
-	if(check2 == 1){
-		interval2 = setInterval(moveRight, 1);
-    	if(check2<2){check2 ++;}
-		}
-
-});
-buttUp.addEventListener("mousedown", event =>{
-	if(check3<2){check3 ++;}
-	if(check3 == 1){
-		interval3 = setInterval(moveDown, 1);
-	    if(check3<2){check3 ++;}
-		}
-	
-});
-buttDown.addEventListener("mousedown", event =>{
-	if(check4<2){check4 ++;}
-		if(check4 == 1){
-		interval4 = setInterval(moveUp, 1);
-    	if(check4<2){check4 ++;}
-		}
-});
-
-buttLeft.addEventListener("mouseup", event =>{
-		clearInterval(interval1);
-		check1 = 0;
-});
-buttRight.addEventListener("mouseup", event =>{
-		clearInterval(interval2);
-		check2 = 0;
-});
-buttUp.addEventListener("mouseup", event =>{
-		clearInterval(interval3);
-		check3 = 0;
-});
-buttDown.addEventListener("mouseup", event =>{
-		clearInterval(interval4);
-		check4 = 0;
-});
 
 
 var checkDead = setInterval(function(){

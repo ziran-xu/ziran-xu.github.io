@@ -30,22 +30,22 @@ block.addEventListener('animationiteration',()=>{
 function moveLeft(){
 	var position =
 	parseInt(window.getComputedStyle(character).getPropertyValue("left"));
-	character.style.left = position - 5 + "px";
+	character.style.left = position - 2 + "px";
 }
 function moveRight(){
 	var position =
 	parseInt(window.getComputedStyle(character).getPropertyValue("left"));
-	character.style.left = position + 5 + "px";
+	character.style.left = position + 2 + "px";
 }
 function moveDown(){
 	var position =
 	parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-	character.style.top = position + 5+ "px";
+	character.style.top = position + 2 + "px";
 }
 function moveUp(){
 	var position =
 	parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-	character.style.top = position - 5 + "px";
+	character.style.top = position - 2 + "px";
 }
 
 document.addEventListener("keydown", event => {

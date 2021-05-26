@@ -120,7 +120,10 @@ button{
 	border-radius: 50%;
 }
 
-html{background-color: lightblue;}
+html{
+background-color: lightblue;
+margin-left:100px;
+}
 
 #instructions{
 	margin-left: 550px;

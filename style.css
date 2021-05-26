@@ -65,7 +65,8 @@
 	border-radius: 50%;
 }
 
-html{background-color: pink;}
+html{background-color: pink;
+margin-left:100px;}
 
 #instructions{
 	margin-left: 550px;

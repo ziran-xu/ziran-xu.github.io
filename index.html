@@ -1,5 +1,6 @@
 <html>
-<h1> Score: <span id="scorecard">0</span></h1>
+<h1> Highscore: <span id="hscorecard">0</span>	<button type="button" onclick= "callAPI('worstgamefirst', 'worstgamelast', 0, true)">Reset Highscore</button>	Score: <span id="scorecard">0</span></h1>
+
 <head>
 	<title>Worst Game</title>
 	<link rel="stylesheet" href="style.css">
@@ -12,6 +13,7 @@
 		<img id="backimg" src="images/painting.jpg"></div>
 	</div>
 </body>
+
 <div id="instructions">
 <h2>
 	Instructions:<br>
@@ -21,11 +23,15 @@
 	- W A S D keys also work if CapsLock is off<br>
 	- Triangle increases score and removes lava<br>
 	- Falling cat is bad<br>
-	- Do not leave the boundary
+	- Do not leave the boundary<br>
+	- Highscore is updated on page refresh or game over<br>
+	- Reset button resets highscore to 0<br>
 </h3>
 <h3>
 	<a href="Experiment/index2.html"> Experimental Version
 </h3>
+
 </div>
+
 <script src="script.js"></script>
 </html>
